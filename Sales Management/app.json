@@ -2,18 +2,18 @@
   "id": "eacdc5bb-90ba-4cc0-a187-81bb525dcc18",
   "name": "Sales Management",
   "publisher": "Digmatix Poland",
-  "version": "1.0.0.0",
+  "version": "28.0.0.0",
   "brief": "",
   "description": "",
-  "privacyStatement": "",
+  "privacyStatement": "https://www.digmatix.com/en/privacy-policy",
   "EULA": "",
   "help": "",
-  "url": "",
+  "url": "https://www.digmatix.com/en",
   "logo": "",
   "dependencies": [],
   "screenshots": [],
   "platform": "1.0.0.0",
-  "application": "22.0.0.0",
+  "application": "28.0.0.0",
   "idRanges": [
     {
       "from": 50100,
@@ -21,11 +21,14 @@
     }
   ],
   "features": [
-    "NoImplicitWith"
+    "NoImplicitWith",
+    "TranslationFile"
   ],
   "resourceExposurePolicy": {
     "allowDebugging": true,
     "allowDownloadingSource": false,
     "includeSourceInSymbolFile": false
-  }
+  },
+  "runtime": "17.0",
+  "target": "Cloud"
 }
