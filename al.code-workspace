@@ -1,0 +1,36 @@
+{
+  "folders": [
+    {
+      "path": "Sales Management"
+    },
+    {
+      "path": ".AL-Go"
+    }
+  ],
+  "extensions": {
+    "recommendations": [
+      "ms-dynamics-smb.al",
+      "waldo.crs-al-language-extension"
+    ]
+  },
+  "settings": {
+    "git.autofetch": true,
+    "git.openRepositoryInParentFolders": "always",
+    "CRS.FileNamePattern": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+    "CRS.FileNamePatternExtensions": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+    "CRS.FileNamePatternPageCustomizations": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+    "CRS.RemovePrefixFromFilename": true,
+    "CRS.ObjectNamePrefix": "EDN ",
+    "CRS.ObjectNameSuffix": "",
+    "CRS.RenameWithGit": true,
+    "CRS.ExtensionObjectNamePattern": null,
+    "CRS.OnSaveAlFileAction": "Reorganize",
+    "CRS.AlSubFolderName": "src",
+    "al.enableCodeAnalysis": true,
+    "al.codeAnalyzers": [
+      "${CodeCop}",
+      "${UICop}",
+      "${PerTenantExtensionCop}"
+    ]
+  }
+}
