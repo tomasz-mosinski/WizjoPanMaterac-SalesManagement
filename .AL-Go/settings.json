@@ -1,16 +1,17 @@
 {
   "$schema": "https://raw.githubusercontent.com/microsoft/AL-Go-Actions/v8.1/.Modules/settings.schema.json",
-   "country": "w1",
-      "appFolders": [
-      "."
-    ],
-    "testFolders": [],
-    "bcptTestFolders": [],
-    "isolation": "hyperv",
-    "versioningStrategy": 3,
-    "gitHubRunner": "self-hosted",
-    "skipContainer": true,
-    "doNotRunTests": true,
-    "useCompilerFolder": true,
-    "doNotPublishApps": true
+  "country": "w1",
+  "appFolders": [
+    ".",
+    "Sales Management"
+  ],
+  "testFolders": [],
+  "bcptTestFolders": [],
+  "isolation": "hyperv",
+  "versioningStrategy": 3,
+  "gitHubRunner": "self-hosted",
+  "skipContainer": true,
+  "doNotRunTests": true,
+  "useCompilerFolder": true,
+  "doNotPublishApps": true
 }
