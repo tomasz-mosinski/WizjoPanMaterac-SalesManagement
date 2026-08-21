@@ -19,7 +19,7 @@
     "CRS.FileNamePattern": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
     "CRS.FileNamePatternExtensions": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
     "CRS.FileNamePatternPageCustomizations": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
-    "CRS.RemovePrefixFromFilename": true,
+    "CRS.RemovePrefixFromFilename": false,
     "CRS.ObjectNamePrefix": "EDN ",
     "CRS.ObjectNameSuffix": "",
     "CRS.RenameWithGit": true,
