@@ -2,7 +2,7 @@
   "id": "eacdc5bb-90ba-4cc0-a187-81bb525dcc18",
   "name": "Sales Management",
   "publisher": "Digmatix Poland",
-  "version": "28.0.1.0",
+  "version": "28.0.2.0",
   "brief": "",
   "description": "",
   "privacyStatement": "https://www.digmatix.com/en/privacy-policy",
@@ -10,7 +10,14 @@
   "help": "",
   "url": "https://www.digmatix.com/en",
   "logo": "logo\\Logo.png",
-  "dependencies": [],
+  "dependencies": [
+    {
+      "id": "992c2309-cca4-43cb-9e41-911f482ec088",
+      "name": "NP Retail",
+      "publisher": "NaviPartner",
+      "version": "2800.146.0.10000"
+    }
+  ],
   "screenshots": [],
   "platform": "1.0.0.0",
   "application": "28.0.0.0",

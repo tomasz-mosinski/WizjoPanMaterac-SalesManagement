@@ -3,6 +3,486 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="Sales Management">
     <body>
       <group id="body">
+        <trans-unit id="Table 972757914 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Negative Sale Override Log</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 1577990513 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Adjustment Document No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Adjustment Document No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 4043963673 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Adjustment Error</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Adjustment Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 1657087466 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Adjustment Posted</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Adjustment Posted - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 1680897203 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Available Qty. (Base)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Available Qty (Base) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 2814799924 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bin Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Bin Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 2570673311 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Created At</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Created At - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 2842094365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Item Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 2161572060 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Location Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 3336172313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Action Taken</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Override Action Taken - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 1378617724 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Override Reason</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Override Reason - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 380249037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Of Which Unposted POS Entries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Pending POS Qty (Base) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 822577585 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>POS Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field POS Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 1873711973 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>POS Entry Posting Failed</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field POS Entry Post Failed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 3564818114 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>POS Store Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field POS Store Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 3527689409 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Prevent Neg. Inventory Active</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Prevent Neg. Inv. Active - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 2542492690 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>POS Unit No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Register No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 1948814140 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Requested Qty. (Base)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Requested Qty (Base) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 938373264 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Of Which Reserved</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Reserved Qty (Base) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 256197801 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sale Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Sale Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 1995878062 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sale Line No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Sale Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 3885125639 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sale Line SystemId</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Sale Line SystemId - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 917429557 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Ticket No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Sales Ticket No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 1734824631 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shortfall Qty. (Base)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Shortfall Qty (Base) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 2385270358 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line Unit of Measure</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Unit of Measure Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 2708250016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field User ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972757914 - Field 3450651614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Variant Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Variant Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1222742556 - NamedType 3393303734" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bin %1 is not enabled for POS sales. Choose a bin marked "Allowed for POS Sale".</source>
+          <note from="Developer" annotates="general" priority="2">%1 = bin code</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EDN Availability Check Mgt. - NamedType BinNotForPOSErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1222742556 - NamedType 325564756" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Not enough stock for %1 (%2) in bin %6.\Available: %3, requested in this sale: %4 %5.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Item No., %2 = description, %3 = available quantity, %4 = requested quantity, %5 = base unit of measure, %6 = bin code</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EDN Availability Check Mgt. - NamedType BlockedBinErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1222742556 - NamedType 3621259247" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Not enough stock for %1 (%2).\Available: %3, requested in this sale: %4 %5.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Item No., %2 = description, %3 = available quantity, %4 = requested quantity, %5 = base unit of measure</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EDN Availability Check Mgt. - NamedType BlockedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1222742556 - NamedType 3910898602" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The user cancelled the sale.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EDN Availability Check Mgt. - NamedType CancelledErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1222742556 - NamedType 1230998523" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No bin is set on the line for %1. The location requires a bin. Ask an administrator to set a default bin for the item.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Item No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EDN Availability Check Mgt. - NamedType NoBinErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1222742556 - NamedType 2599807462" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bin %1 is not enabled for POS sales. Set the default bin of item %2 to a bin marked "Allowed for POS Sale".</source>
+          <note from="Developer" annotates="general" priority="2">%1 = bin code, %2 = Item No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EDN Availability Check Mgt. - NamedType NotPOSSaleBinErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1222742556 - NamedType 2966285523" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This sale will make the stock of %1 in bin %4 negative.\Available: %2, requested: %3.\\Do you want to continue?</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Item No., %2 = available quantity, %3 = requested quantity, %4 = bin code</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EDN Availability Check Mgt. - NamedType WarnBinQst</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1222742556 - NamedType 4051543649" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This sale will make the stock of %1 in bin %4 negative.\Available: %2, requested: %3.\\Prevent Negative Inventory is turned on. The receipt will be printed, but the sale will not post until someone corrects the stock.\\Do you want to continue?</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Item No., %2 = available quantity, %3 = requested quantity, %4 = bin code</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EDN Availability Check Mgt. - NamedType WarnPreventBinQst</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1222742556 - NamedType 928938310" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This sale will make the stock of %1 negative.\Available: %2, requested: %3.\\Prevent Negative Inventory is turned on. The receipt will be printed, but the sale will not post until someone corrects the stock.\\Do you want to continue?</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Item No., %2 = available quantity, %3 = requested quantity</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EDN Availability Check Mgt. - NamedType WarnPreventQst</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1222742556 - NamedType 2266549888" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This sale will make the stock of %1 negative.\Available: %2, requested: %3.\\Do you want to continue?</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Item No., %2 = available quantity, %3 = requested quantity</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EDN Availability Check Mgt. - NamedType WarnQst</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1668929803 - NamedType 1274688877" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entries checked: %1. Marked as probably unposted: %2.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = number checked, %2 = number marked</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EDN Neg. Sale Reconciliation - NamedType ReconciledMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1707072805 - NamedType 4003190368" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Automatic adjustment - POS sale below stock</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EDN Override Handler - NamedType AdjustmentDescLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1707072805 - NamedType 577678682" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The stock adjustment for %1 could not be posted: %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Item No., %2 = error text</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EDN Override Handler - NamedType AdjustmentFailedLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Negative Sale Override Log</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 1577990513 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The document number of the adjustment in the item ledger entries.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control Adjustment Document No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 4043963673 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The error message, if the adjustment failed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control Adjustment Error - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 1657087466 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Whether the adjustment that corrects the stock was posted.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control Adjustment Posted - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 1680897203 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The quantity available in the base unit of measure, after unposted entries and open POS sales are subtracted.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control Available Qty (Base) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 2814799924 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The bin the sale draws from. Set only when the location requires a bin; the availability was then checked for this bin.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control Bin Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 2570673311 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>When the sale below stock was allowed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control Created At - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 2842094365 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The description of the item.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control Item Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 568743302 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The item sold below the available stock.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control Item No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 2161572060 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The location where the shortfall happened.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control Location Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 3336172313 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The action that the system took.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control Override Action Taken - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 1378617724 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Why the sale was allowed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control Override Reason - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 380249037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The quantity in POS sales that are finished but not yet posted.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control Pending POS Qty (Base) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 822577585 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The related POS entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control POS Entry No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 1873711973 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Whether posting of the POS entry failed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control POS Entry Post Failed - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 3564818114 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The store where the override happened.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control POS Store Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 3527689409 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Whether Prevent Negative Inventory was active for this item.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control Prevent Neg. Inv. Active - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 2542492690 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The POS unit where the sale was allowed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control Register No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 1948814140 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The total quantity requested in this sale, in the base unit of measure.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control Requested Qty (Base) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 256197801 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The date of the POS sale.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control Sale Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 917429557 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The sales ticket that contains the allowed sale.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control Sales Ticket No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 1734824631 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The size of the shortfall in the base unit of measure.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control Shortfall Qty (Base) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 2385270358 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The unit of measure used on the sale line.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control Unit of Measure Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 2708250016 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The user who made the override.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control User ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Control 3450651614 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The variant of the item.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Control Variant Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Action 334713382 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows the full list of entries again.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Action ClearFilters - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Action 334713382 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Clear Filters</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Action ClearFilters - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Action 1443627946 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Goes through the overrides without a stock adjustment and marks those whose sale is still not posted. You can also schedule this in the job queue.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Action RunReconciliation - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Action 1443627946 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check Unposted Entries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Action RunReconciliation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Action 2288348344 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows only the sales that failed to post because of a shortfall.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Action ShowFailedOnly - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Action 2288348344 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Failed Postings Only</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Action ShowFailedOnly - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Action 79176595 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows the item ledger entries for the selected item and location.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Action ShowItemLedgerEntries - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 972757914 - Action 79176595 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Ledger Entries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page EDN Neg. Sale Override Log - Action ShowItemLedgerEntries - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2262585899 - Control 1948967491 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1149163217">
+          <source>Stock in this bin counts as available for POS sales. Mark the sales floor bins. If no bin at a location is marked, POS sales from that location are blocked.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EDN Bin List Ext - Control EDN Allow POS Sale - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1615988620 - Control 1948967491 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3448049138">
+          <source>Stock in this bin counts as available for POS sales. Mark the sales floor bins. If no bin at a location is marked, POS sales from that location are blocked.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EDN Bins Ext - Control EDN Allow POS Sale - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1837040204 - Action 676027501 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1180040559">
+          <source>Shows the cases where a sale below the available stock was allowed at the POS.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EDN Inventory Setup PageExt - Action EDN EDNShowOverrideLog - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1837040204 - Action 676027501 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1180040559">
+          <source>POS Override Log</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EDN Inventory Setup PageExt - Action EDN EDNShowOverrideLog - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1837040204 - Control 2538674237 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1180040559">
+          <source>The default mechanism. It uses standard table events, so it works with any NP Retail version. Turn it off only after you enable the optional NP Retail event subscribers.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EDN Inventory Setup PageExt - Control EDN Use Fallback Hook - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1837040204 - Control 2720008013 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1180040559">
+          <source>The primary mechanism. It subscribes to the public NP Retail POS Sale Line events (quantity, unit of measure, location and line insert). Leave it on. It can run together with the table-event fallback without asking the cashier twice.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EDN Inventory Setup PageExt - Control EDN Use NPR POS Events - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 265106833 - Control 3084827675 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Lets the POS sell this item without enough stock, with no warning and no block. Use it for services, deposits and vouchers.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EDN Item Card Ext - Control EDN Allow POS Negative - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1219359019 - NamedType 1517699434" size-unit="char" translate="yes" xml:space="preserve" al-object-target="PageExtension 1219359019">
+          <source>This setup lets the cashier finish a sale below stock, but Prevent Negative Inventory is turned on in Inventory Setup.\\As a result, the receipt is printed, but the POS entry will not post during the job queue run.\\We recommend that you select Hard Block, or the action Post Positive Adjustment.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EDN POS Store Card Ext - NamedType InconsistentMsg</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1219359019 - Action 676027501 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3041833949">
+          <source>Shows the cases where a sale below stock was allowed in this store.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EDN POS Store Card Ext - Action EDN EDNShowOverrideLog - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1219359019 - Action 676027501 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3041833949">
+          <source>Override Log</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EDN POS Store Card Ext - Action EDN EDNShowOverrideLog - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1219359019 - Control 3470144828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3041833949">
+          <source>Block Sale Below Stock</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EDN POS Store Card Ext - Control EDN EDNAvailabilityBlock - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1219359019 - Control 3160905862 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3041833949">
+          <source>Item journal batch used to post the correcting adjustments.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EDN POS Store Card Ext - Control EDN Adjustment Jnl. Batch - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1219359019 - Control 179522762 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3041833949">
+          <source>Item journal template used to post the correcting adjustments.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EDN POS Store Card Ext - Control EDN Adjustment Jnl. Template - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1219359019 - Control 1037183739 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3041833949">
+          <source>Reason code written on the adjustment, so that you can find these shortfalls in reports.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EDN POS Store Card Ext - Control EDN Adjustment Reason Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1219359019 - Control 1599107031 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3041833949">
+          <source>Sets how the POS reacts when someone tries to sell more than the available stock. Hard Block stops the sale, Warning Only lets the cashier continue.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EDN POS Store Card Ext - Control EDN Block Mode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1219359019 - Control 1740764397 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3041833949">
+          <source>Subtracts quantities held in open sales on other POS units. With a very high number of open sales, this can slow down the POS.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EDN POS Store Card Ext - Control EDN Include Open POS Sales - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1219359019 - Control 2344565702 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3041833949">
+          <source>Subtracts quantities from sales that are already finished at the POS but not yet posted by the job queue. If you turn this off, the same item can be sold twice on the same day.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EDN POS Store Card Ext - Control EDN Include Pending POS Entries - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1219359019 - Control 2654072111 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3041833949">
+          <source>Sets what happens after a sale is allowed. Post Positive Adjustment corrects the stock at once, so the POS entry can be posted without an error.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EDN POS Store Card Ext - Control EDN Override Action - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1219359019 - Control 3031224612 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3041833949">
+          <source>Users with this permission set can sell the item without enough stock, and they are not asked to confirm.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EDN POS Store Card Ext - Control EDN Override Permission - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 738243085 - Field 1948967491 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 400793991">
+          <source>Stock in this bin counts as available for POS sales. Mark the sales floor bins. If no bin at a location is marked, POS sales from that location are blocked.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN Bin Ext - Field EDN Allow POS Sale - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 738243085 - Field 1948967491 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 400793991">
+          <source>Allowed for POS Sale</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN Bin Ext - Field EDN Allow POS Sale - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 2115728637 - Field 2560351987 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
           <source>Specifies additional number/identifier of the customer.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -22,6 +502,146 @@
           <source>Symbol</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN Customer - Field EDN Symbol - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4166720501 - Field 2538674237 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1180040559">
+          <source>The default mechanism. It uses standard table events, so it works with any NP Retail version. Turn it off only after you enable the optional NP Retail event subscribers from the optional folder, otherwise the cashier is asked to confirm twice.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN Inventory Setup Ext - Field EDN Use Fallback Hook - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4166720501 - Field 2538674237 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1180040559">
+          <source>Check POS Using Table Events</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN Inventory Setup Ext - Field EDN Use Fallback Hook - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4166720501 - Field 2720008013 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1180040559">
+          <source>The primary mechanism. It subscribes to the public NP Retail POS Sale Line events (quantity, unit of measure, location and line insert). Leave it on. It can run together with the table-event fallback without asking the cashier twice.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN Inventory Setup Ext - Field EDN Use NPR POS Events - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4166720501 - Field 2720008013 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1180040559">
+          <source>Check POS Using NP Retail Events</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN Inventory Setup Ext - Field EDN Use NPR POS Events - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3595664277 - Field 3084827675 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Allow POS Sale Below Zero</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN Item Ext - Field EDN Allow POS Negative - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1709517783 - Field 3160905862 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
+          <source>Adjustment Journal Batch</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store Ext - Field EDN Adjustment Jnl. Batch - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1709517783 - Field 179522762 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
+          <source>Adjustment Journal Template</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store Ext - Field EDN Adjustment Jnl. Template - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1709517783 - Field 1037183739 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
+          <source>Adjustment Reason Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store Ext - Field EDN Adjustment Reason Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1709517783 - Field 1599107031 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
+          <source>Block Sale Below Stock</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store Ext - Field EDN Block Mode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1709517783 - Field 188256250 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
+          <source>Block Sale When No Bin</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store Ext - Field EDN Block When No Bin - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1709517783 - Field 3963792508 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
+          <source>Include Unposted POS Entries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store Ext - Field EDN Incl. Pending POS Entries - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1709517783 - Field 1740764397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
+          <source>Include Open Sales</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store Ext - Field EDN Include Open POS Sales - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1709517783 - Field 884607228 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
+          <source>Include Reservations</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store Ext - Field EDN Include Reservations - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1709517783 - Field 2654072111 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
+          <source>Action When Sale Is Allowed</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store Ext - Field EDN Override Action - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1709517783 - Field 3031224612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
+          <source>Override Permission Set</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store Ext - Field EDN Override Permission - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1599107031 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Block Mode</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EDN Block Mode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1599107031 - EnumValue 1864907812 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disabled</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EDN Block Mode - EnumValue Disabled - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1599107031 - EnumValue 2691579066 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hard Block</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EDN Block Mode - EnumValue Hard Block - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1599107031 - EnumValue 3955473374 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Warning Only</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EDN Block Mode - EnumValue Warning - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2654072111 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Action When Sale Is Allowed</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EDN Override Action - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2654072111 - EnumValue 3954169733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post Positive Adjustment</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EDN Override Action - EnumValue Auto Positive Adjustment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2654072111 - EnumValue 3347515684 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Log Only</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EDN Override Action - EnumValue Log Only - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2654072111 - EnumValue 3371220206 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do Nothing</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EDN Override Action - EnumValue None - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2893980953 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Override Reason</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EDN Override Reason - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2893980953 - EnumValue 2222315416 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cashier Confirmed</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EDN Override Reason - EnumValue Cashier Confirmed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2893980953 - EnumValue 2650216726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Offline Mode</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EDN Override Reason - EnumValue Offline Mode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2893980953 - EnumValue 4161793865 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Permission Override</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum EDN Override Reason - EnumValue Permission Override - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 2821463899 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Management (SUPER)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet EDN Sales Mgt(SUPER) - Property Caption</note>
         </trans-unit>
       </group>
     </body>
