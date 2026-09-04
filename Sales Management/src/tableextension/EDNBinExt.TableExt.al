@@ -6,7 +6,7 @@ Tableextension 50103 "EDN Bin Ext" extends Bin
 {
     fields
     {
-        field(60100; "EDN Allow POS Sale"; Boolean)
+        field(50100; "EDN Allow POS Sale"; Boolean)
         {
             Caption = 'Allowed for POS Sale';
             DataClassification = CustomerContent;

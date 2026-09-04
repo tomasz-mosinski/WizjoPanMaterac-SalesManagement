@@ -10,12 +10,12 @@ tableextension 50104 "EDN POS Store Ext" extends "NPR POS Store"
 {
     fields
     {
-        field(60100; "EDN Block Mode"; Enum "EDN Block Mode")
+        field(50100; "EDN Block Mode"; Enum "EDN Block Mode")
         {
             Caption = 'Block Sale Below Stock';
             DataClassification = CustomerContent;
         }
-        field(60101; "EDN Include Reservations"; Boolean)
+        field(50101; "EDN Include Reservations"; Boolean)
         {
             Caption = 'Include Reservations';
             DataClassification = CustomerContent;
@@ -24,20 +24,20 @@ tableextension 50104 "EDN POS Store Ext" extends "NPR POS Store"
             ObsoleteState = Pending;
             ObsoleteTag = '1.0.5.0';
         }
-        field(60102; "EDN Include Open POS Sales"; Boolean)
+        field(50102; "EDN Include Open POS Sales"; Boolean)
         {
             Caption = 'Include Open Sales';
             DataClassification = CustomerContent;
             InitValue = true;
         }
-        field(60103; "EDN Override Permission"; Code[20])
+        field(50103; "EDN Override Permission"; Code[20])
         {
             Caption = 'Override Permission Set';
             DataClassification = CustomerContent;
             TableRelation = "Aggregate Permission Set"."Role ID";
             ValidateTableRelation = false;
         }
-        field(60104; "EDN Override Action"; Enum "EDN Override Action")
+        field(50104; "EDN Override Action"; Enum "EDN Override Action")
         {
             Caption = 'Action When Sale Is Allowed';
             DataClassification = CustomerContent;
