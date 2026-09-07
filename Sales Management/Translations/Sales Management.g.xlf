@@ -148,11 +148,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Variant Code - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1222742556 - NamedType 3393303734" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Bin %1 is not enabled for POS sales. Choose a bin marked "Allowed for POS Sale".</source>
-          <note from="Developer" annotates="general" priority="2">%1 = bin code</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EDN Availability Check Mgt. - NamedType BinNotForPOSErr</note>
-        </trans-unit>
         <trans-unit id="Codeunit 1222742556 - NamedType 325564756" size-unit="char" translate="yes" xml:space="preserve">
           <source>Not enough stock for %1 (%2) in bin %6.\Available: %3, requested in this sale: %4 %5.</source>
           <note from="Developer" annotates="general" priority="2">%1 = Item No., %2 = description, %3 = available quantity, %4 = requested quantity, %5 = base unit of measure, %6 = bin code</note>
@@ -172,11 +167,6 @@
           <source>No bin is set on the line for %1. The location requires a bin. Ask an administrator to set a default bin for the item.</source>
           <note from="Developer" annotates="general" priority="2">%1 = Item No.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EDN Availability Check Mgt. - NamedType NoBinErr</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 1222742556 - NamedType 2599807462" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Bin %1 is not enabled for POS sales. Set the default bin of item %2 to a bin marked "Allowed for POS Sale".</source>
-          <note from="Developer" annotates="general" priority="2">%1 = bin code, %2 = Item No.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EDN Availability Check Mgt. - NamedType NotPOSSaleBinErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 1222742556 - NamedType 2966285523" size-unit="char" translate="yes" xml:space="preserve">
           <source>This sale will make the stock of %1 in bin %4 negative.\Available: %2, requested: %3.\\Do you want to continue?</source>
@@ -212,6 +202,11 @@
           <source>The stock adjustment for %1 could not be posted: %2</source>
           <note from="Developer" annotates="general" priority="2">%1 = Item No., %2 = error text</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit EDN Override Handler - NamedType AdjustmentFailedLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1524555404 - NamedType 3433102771" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment cannot be taken for this sale. Item %1 is on bin %2, which is not enabled for POS sales (Allowed for POS Sale = No). Move the item to a sales floor bin marked "Allowed for POS Sale", or remove the line.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Item No., %2 = bin code</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit EDN POS Bin Sale Guard - NamedType PaymentBlockedByBinErr</note>
         </trans-unit>
         <trans-unit id="Page 972757914 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Negative Sale Override Log</source>

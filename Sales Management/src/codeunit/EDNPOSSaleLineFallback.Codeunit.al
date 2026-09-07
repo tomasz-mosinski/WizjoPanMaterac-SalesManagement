@@ -63,22 +63,6 @@ codeunit 50105 "EDN POS Sale Line Fallback"
     end;
 
 
-    [EventSubscriber(ObjectType::Table, Database::"NPR POS Sale Line", 'OnAfterValidateEvent', 'Bin Code', false, false)]
-    local procedure OnAfterValidateBinCode(var Rec: Record "NPR POS Sale Line"; var xRec: Record "NPR POS Sale Line")
-    var
-        CheckMgt: Codeunit "EDN Availability Check Mgt.";
-    begin
-        if Rec.IsTemporary() then
-            exit;
-        if Rec."Bin Code" = '' then
-            exit;
-        if Rec."Bin Code" = xRec."Bin Code" then
-            exit;
-
-        CheckMgt.EnsureSaleLineBinAllowed(Rec);
-    end;
-
-
     [EventSubscriber(ObjectType::Table, Database::"NPR POS Sale Line", 'OnAfterValidateEvent', 'Quantity', false, false)]
     local procedure OnAfterValidateQuantity(var Rec: Record "NPR POS Sale Line"; var xRec: Record "NPR POS Sale Line")
     var

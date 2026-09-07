@@ -41,6 +41,7 @@ permissionset 50100 "EDN Sales Mgt(SUPER)"
         codeunit "EDN Override Handler" = X,
         codeunit "EDN Availability Check Mgt." = X,
         codeunit "EDN POS Sale Line Fallback" = X,
+        codeunit "EDN POS Bin Sale Guard" = X,
         codeunit "EDN Neg. Sale Reconciliation" = X,
         codeunit "EDN Install" = X;
 }

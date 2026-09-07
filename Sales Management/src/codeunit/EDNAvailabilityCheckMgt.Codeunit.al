@@ -23,8 +23,6 @@ codeunit 50101 "EDN Availability Check Mgt."
         WarnPreventQst: Label 'This sale will make the stock of %1 negative.\Available: %2, requested: %3.\\Prevent Negative Inventory is turned on. The receipt will be printed, but the sale will not post until someone corrects the stock.\\Do you want to continue?', Comment = '%1 = Item No., %2 = available quantity, %3 = requested quantity';
         WarnPreventBinQst: Label 'This sale will make the stock of %1 in bin %4 negative.\Available: %2, requested: %3.\\Prevent Negative Inventory is turned on. The receipt will be printed, but the sale will not post until someone corrects the stock.\\Do you want to continue?', Comment = '%1 = Item No., %2 = available quantity, %3 = requested quantity, %4 = bin code';
         NoBinErr: Label 'No bin is set on the line for %1. The location requires a bin. Ask an administrator to set a default bin for the item.', Comment = '%1 = Item No.';
-        NotPOSSaleBinErr: Label 'Bin %1 is not enabled for POS sales. Set the default bin of item %2 to a bin marked "Allowed for POS Sale".', Comment = '%1 = bin code, %2 = Item No.';
-        BinNotForPOSErr: Label 'Bin %1 is not enabled for POS sales. Choose a bin marked "Allowed for POS Sale".', Comment = '%1 = bin code';
         CancelledErr: Label 'The user cancelled the sale.';
 
 
@@ -65,12 +63,9 @@ codeunit 50101 "EDN Availability Check Mgt."
             exit;
 
 
-        if AvailabilityCalc.LocationRequiresBin(SaleLinePOS."Location Code") then begin
+        if AvailabilityCalc.LocationRequiresBin(SaleLinePOS."Location Code") then
             if SaleLinePOS."Bin Code" = '' then
                 Error(NoBinErr, SaleLinePOS."No.");
-            if not AvailabilityCalc.IsPOSSaleBin(SaleLinePOS."Location Code", SaleLinePOS."Bin Code") then
-                Error(NotPOSSaleBinErr, SaleLinePOS."Bin Code", SaleLinePOS."No.");
-        end;
 
         EffBinCode := AvailabilityCalc.GetEffectiveBinCode(
             SaleLinePOS."No.", SaleLinePOS."Variant Code", SaleLinePOS."Location Code", SaleLinePOS."Bin Code");
@@ -168,31 +163,5 @@ codeunit 50101 "EDN Availability Check Mgt."
         AccessControl.SetRange("User Security ID", UserSecurityId());
         AccessControl.SetRange("Role ID", POSStore."EDN Override Permission");
         exit(not AccessControl.IsEmpty());
-    end;
-
-
-    procedure EnsureSaleLineBinAllowed(SaleLinePOS: Record "NPR POS Sale Line")
-    var
-        POSUnit: Record "NPR POS Unit";
-        POSStore: Record "NPR POS Store";
-    begin
-        if SaleLinePOS."Line Type" <> SaleLinePOS."Line Type"::Item then
-            exit;
-        if SaleLinePOS."Bin Code" = '' then
-            exit;
-        if SaleLinePOS."No." in ['', '*'] then
-            exit;
-        if not AvailabilityCalc.LocationRequiresBin(SaleLinePOS."Location Code") then
-            exit;
-
-        if not POSUnit.Get(SaleLinePOS."Register No.") then
-            exit;
-        if not POSStore.Get(POSUnit."POS Store Code") then
-            exit;
-        if POSStore."EDN Block Mode" = POSStore."EDN Block Mode"::Disabled then
-            exit;
-
-        if not AvailabilityCalc.IsPOSSaleBin(SaleLinePOS."Location Code", SaleLinePOS."Bin Code") then
-            Error(BinNotForPOSErr, SaleLinePOS."Bin Code");
     end;
 }
