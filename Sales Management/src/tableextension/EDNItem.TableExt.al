@@ -2,7 +2,7 @@ namespace EDN.SalesManagement;
 
 using Microsoft.Inventory.Item;
 
-tableextension 50102 "EDN Item Ext" extends Item
+tableextension 50102 "EDN Item" extends Item
 {
     fields
     {

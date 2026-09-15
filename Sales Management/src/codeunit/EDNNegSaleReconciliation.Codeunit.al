@@ -16,7 +16,6 @@ codeunit 50103 "EDN Neg. Sale Reconciliation"
         RunReconciliation(GetDefaultGracePeriod());
     end;
 
-
     procedure RunReconciliation(GracePeriod: Duration) FlaggedCount: Integer
     var
         OverrideLog: Record "EDN Neg. Sale Override Log";
@@ -42,7 +41,6 @@ codeunit 50103 "EDN Neg. Sale Reconciliation"
             Message(ReconciledMsg, CheckedCount, FlaggedCount);
     end;
 
-
     local procedure IsLikelyUnposted(OverrideLog: Record "EDN Neg. Sale Override Log"): Boolean
     var
         AvailabilityCalc: Codeunit "EDN Availability Calc";
@@ -50,11 +48,9 @@ codeunit 50103 "EDN Neg. Sale Reconciliation"
         InventoryQty: Decimal;
         EffBinCode: Code[20];
     begin
-        EffBinCode := AvailabilityCalc.GetEffectiveBinCode(
-            OverrideLog."Item No.", OverrideLog."Variant Code", OverrideLog."Location Code", OverrideLog."Bin Code");
+        EffBinCode := AvailabilityCalc.GetEffectiveBinCode(OverrideLog."Item No.", OverrideLog."Variant Code", OverrideLog."Location Code", OverrideLog."Bin Code");
 
-        PendingQty := AvailabilityCalc.CalcPendingPOSEntryQty(
-            OverrideLog."Item No.", OverrideLog."Variant Code", OverrideLog."Location Code", EffBinCode);
+        PendingQty := AvailabilityCalc.CalcPendingPOSEntryQty(OverrideLog."Item No.", OverrideLog."Variant Code", OverrideLog."Location Code", EffBinCode);
         if PendingQty <= 0 then
             exit(false);
 
@@ -63,7 +59,6 @@ codeunit 50103 "EDN Neg. Sale Reconciliation"
 
         exit(InventoryQty < PendingQty);
     end;
-
 
     procedure FlagEntriesForSale(RegisterNo: Code[10]; SalesTicketNo: Code[20]; POSEntryNo: Integer)
     var
@@ -80,7 +75,6 @@ codeunit 50103 "EDN Neg. Sale Reconciliation"
             OverrideLog.Modify(true);
         until OverrideLog.Next() = 0;
     end;
-
 
     local procedure GetDefaultGracePeriod(): Duration
     begin

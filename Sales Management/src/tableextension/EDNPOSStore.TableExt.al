@@ -6,7 +6,7 @@ using Microsoft.Inventory.Setup;
 using System.Security.AccessControl;
 
 
-tableextension 50104 "EDN POS Store Ext" extends "NPR POS Store"
+tableextension 50104 "EDN POS Store" extends "NPR POS Store"
 {
     fields
     {
@@ -14,15 +14,6 @@ tableextension 50104 "EDN POS Store Ext" extends "NPR POS Store"
         {
             Caption = 'Block Sale Below Stock';
             DataClassification = CustomerContent;
-        }
-        field(50101; "EDN Include Reservations"; Boolean)
-        {
-            Caption = 'Include Reservations';
-            DataClassification = CustomerContent;
-            InitValue = true;
-            ObsoleteReason = 'POS availability is now driven by the "Allowed for POS Sale" flag on bins; order reservations are no longer subtracted.';
-            ObsoleteState = Pending;
-            ObsoleteTag = '1.0.5.0';
         }
         field(50102; "EDN Include Open POS Sales"; Boolean)
         {
@@ -51,7 +42,7 @@ tableextension 50104 "EDN POS Store Ext" extends "NPR POS Store"
                 end;
             end;
         }
-        field(60105; "EDN Adjustment Jnl. Template"; Code[10])
+        field(50105; "EDN Adjustment Jnl. Template"; Code[10])
         {
             Caption = 'Adjustment Journal Template';
             DataClassification = CustomerContent;
@@ -63,33 +54,24 @@ tableextension 50104 "EDN POS Store Ext" extends "NPR POS Store"
                     "EDN Adjustment Jnl. Batch" := '';
             end;
         }
-        field(60106; "EDN Adjustment Jnl. Batch"; Code[10])
+        field(50106; "EDN Adjustment Jnl. Batch"; Code[10])
         {
             Caption = 'Adjustment Journal Batch';
             DataClassification = CustomerContent;
             TableRelation = "Item Journal Batch".Name
                 where("Journal Template Name" = field("EDN Adjustment Jnl. Template"));
         }
-        field(60107; "EDN Adjustment Reason Code"; Code[10])
+        field(50107; "EDN Adjustment Reason Code"; Code[10])
         {
             Caption = 'Adjustment Reason Code';
             DataClassification = CustomerContent;
             TableRelation = "Reason Code";
         }
-        field(60108; "EDN Incl. Pending POS Entries"; Boolean)
+        field(50108; "EDN Incl. Pending POS Entries"; Boolean)
         {
             Caption = 'Include Unposted POS Entries';
             DataClassification = CustomerContent;
             InitValue = true;
-        }
-        field(60109; "EDN Block When No Bin"; Boolean)
-        {
-            Caption = 'Block Sale When No Bin';
-            DataClassification = CustomerContent;
-            InitValue = false;
-            ObsoleteReason = 'An empty bin on a bin mandatory location now always blocks the sale; there is no location-level fallback.';
-            ObsoleteState = Pending;
-            ObsoleteTag = '1.0.5.0';
         }
     }
 

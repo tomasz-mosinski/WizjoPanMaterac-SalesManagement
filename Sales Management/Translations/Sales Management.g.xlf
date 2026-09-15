@@ -103,11 +103,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Requested Qty (Base) - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 972757914 - Field 938373264 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Of Which Reserved</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table EDN Neg. Sale Override Log - Field Reserved Qty (Base) - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Table 972757914 - Field 256197801 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sale Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -498,80 +493,70 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN Customer - Field EDN Symbol - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 4166720501 - Field 2538674237 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1180040559">
+        <trans-unit id="TableExtension 3470116246 - Field 2538674237 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1180040559">
           <source>The default mechanism. It uses standard table events, so it works with any NP Retail version. Turn it off only after you enable the optional NP Retail event subscribers from the optional folder, otherwise the cashier is asked to confirm twice.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN Inventory Setup Ext - Field EDN Use Fallback Hook - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN Inventory Setup - Field EDN Use Fallback Hook - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="TableExtension 4166720501 - Field 2538674237 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1180040559">
+        <trans-unit id="TableExtension 3470116246 - Field 2538674237 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1180040559">
           <source>Check POS Using Table Events</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN Inventory Setup Ext - Field EDN Use Fallback Hook - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN Inventory Setup - Field EDN Use Fallback Hook - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 4166720501 - Field 2720008013 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1180040559">
+        <trans-unit id="TableExtension 3470116246 - Field 2720008013 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1180040559">
           <source>The primary mechanism. It subscribes to the public NP Retail POS Sale Line events (quantity, unit of measure, location and line insert). Leave it on. It can run together with the table-event fallback without asking the cashier twice.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN Inventory Setup Ext - Field EDN Use NPR POS Events - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN Inventory Setup - Field EDN Use NPR POS Events - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="TableExtension 4166720501 - Field 2720008013 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1180040559">
+        <trans-unit id="TableExtension 3470116246 - Field 2720008013 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1180040559">
           <source>Check POS Using NP Retail Events</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN Inventory Setup Ext - Field EDN Use NPR POS Events - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN Inventory Setup - Field EDN Use NPR POS Events - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3595664277 - Field 3084827675 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+        <trans-unit id="TableExtension 296237942 - Field 3084827675 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
           <source>Allow POS Sale Below Zero</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN Item Ext - Field EDN Allow POS Negative - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN Item - Field EDN Allow POS Negative - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 1709517783 - Field 3160905862 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
+        <trans-unit id="TableExtension 46283464 - Field 3160905862 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
           <source>Adjustment Journal Batch</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store Ext - Field EDN Adjustment Jnl. Batch - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store - Field EDN Adjustment Jnl. Batch - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 1709517783 - Field 179522762 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
+        <trans-unit id="TableExtension 46283464 - Field 179522762 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
           <source>Adjustment Journal Template</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store Ext - Field EDN Adjustment Jnl. Template - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store - Field EDN Adjustment Jnl. Template - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 1709517783 - Field 1037183739 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
+        <trans-unit id="TableExtension 46283464 - Field 1037183739 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
           <source>Adjustment Reason Code</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store Ext - Field EDN Adjustment Reason Code - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store - Field EDN Adjustment Reason Code - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 1709517783 - Field 1599107031 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
+        <trans-unit id="TableExtension 46283464 - Field 1599107031 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
           <source>Block Sale Below Stock</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store Ext - Field EDN Block Mode - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store - Field EDN Block Mode - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 1709517783 - Field 188256250 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
-          <source>Block Sale When No Bin</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store Ext - Field EDN Block When No Bin - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 1709517783 - Field 3963792508 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
+        <trans-unit id="TableExtension 46283464 - Field 3963792508 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
           <source>Include Unposted POS Entries</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store Ext - Field EDN Incl. Pending POS Entries - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store - Field EDN Incl. Pending POS Entries - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 1709517783 - Field 1740764397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
+        <trans-unit id="TableExtension 46283464 - Field 1740764397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
           <source>Include Open Sales</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store Ext - Field EDN Include Open POS Sales - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store - Field EDN Include Open POS Sales - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 1709517783 - Field 884607228 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
-          <source>Include Reservations</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store Ext - Field EDN Include Reservations - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 1709517783 - Field 2654072111 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
+        <trans-unit id="TableExtension 46283464 - Field 2654072111 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
           <source>Action When Sale Is Allowed</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store Ext - Field EDN Override Action - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store - Field EDN Override Action - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 1709517783 - Field 3031224612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
+        <trans-unit id="TableExtension 46283464 - Field 3031224612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 573496913">
           <source>Override Permission Set</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store Ext - Field EDN Override Permission - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension EDN POS Store - Field EDN Override Permission - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 1599107031 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Block Mode</source>

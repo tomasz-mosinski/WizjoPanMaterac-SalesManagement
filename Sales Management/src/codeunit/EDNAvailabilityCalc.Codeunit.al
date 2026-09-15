@@ -41,15 +41,7 @@ codeunit 50100 "EDN Availability Calc"
         BinCacheLocation: Code[10];
         BinCacheCode: Code[20];
 
-
-    procedure GetAvailableQty(
-        ItemNo: Code[20];
-        VariantCode: Code[10];
-        LocationCode: Code[10];
-        BinCode: Code[20];
-        POSStore: Record "NPR POS Store";
-        ExcludeRegisterNo: Code[10];
-        ExcludeSalesTicketNo: Code[20]): Decimal
+    procedure GetAvailableQty(ItemNo: Code[20]; VariantCode: Code[10]; LocationCode: Code[10]; BinCode: Code[20]; POSStore: Record "NPR POS Store"; ExcludeRegisterNo: Code[10]; ExcludeSalesTicketNo: Code[20]): Decimal
     var
         Available: Decimal;
     begin
@@ -59,21 +51,17 @@ codeunit 50100 "EDN Availability Calc"
             Available -= CalcPendingPOSEntryQty(ItemNo, VariantCode, LocationCode, BinCode);
 
         if POSStore."EDN Include Open POS Sales" then
-            Available -= CalcOpenPOSQty(
-                ItemNo, VariantCode, LocationCode, BinCode, ExcludeRegisterNo, ExcludeSalesTicketNo);
+            Available -= CalcOpenPOSQty(ItemNo, VariantCode, LocationCode, BinCode, ExcludeRegisterNo, ExcludeSalesTicketNo);
 
         exit(Available);
     end;
-
 
     procedure LocationRequiresBin(LocationCode: Code[10]): Boolean
     begin
         if not GetLocation(LocationCode) then
             exit(false);
-        exit(
-            LocationCache."Bin Mandatory" and
-            not LocationCache."Directed Put-away and Pick" and
-            not LocationCache."NPR No Whse. Entr. for POS");
+
+        exit(LocationCache."Bin Mandatory" and (not LocationCache."Directed Put-away and Pick") and (not LocationCache."NPR No Whse. Entr. for POS"));
     end;
 
     procedure IsBinMode(LocationCode: Code[10]; BinCode: Code[20]): Boolean
@@ -81,13 +69,14 @@ codeunit 50100 "EDN Availability Calc"
         exit((BinCode <> '') and LocationRequiresBin(LocationCode));
     end;
 
-
     procedure IsPOSSaleBin(LocationCode: Code[10]; BinCode: Code[20]): Boolean
     begin
         if BinCode = '' then
             exit(false);
+
         if not GetBin(LocationCode, BinCode) then
             exit(false);
+
         exit(BinCache."EDN Allow POS Sale");
     end;
 
@@ -96,9 +85,9 @@ codeunit 50100 "EDN Availability Calc"
     begin
         if not IsBinMode(LocationCode, BinCode) then
             exit('');
+
         exit(BinCode);
     end;
-
 
     procedure CalcBinAvailToPick(ItemNo: Code[20]; VariantCode: Code[10]; LocationCode: Code[10]; BinCode: Code[20]): Decimal
     var
@@ -119,7 +108,6 @@ codeunit 50100 "EDN Availability Calc"
         exit(BinContent.CalcQtyAvailToPick(0));
     end;
 
-
     procedure CalcInventory(ItemNo: Code[20]; VariantCode: Code[10]; LocationCode: Code[10]; BinCode: Code[20]): Decimal
     var
         ItemLedgerEntry: Record "Item Ledger Entry";
@@ -135,7 +123,6 @@ codeunit 50100 "EDN Availability Calc"
         exit(ItemLedgerEntry.Quantity);
     end;
 
-
     procedure CalcPendingPOSEntryQty(ItemNo: Code[20]; VariantCode: Code[10]; LocationCode: Code[10]; BinCode: Code[20]): Decimal
     var
         POSEntrySalesLine: Record "NPR POS Entry Sales Line";
@@ -145,20 +132,18 @@ codeunit 50100 "EDN Availability Calc"
     begin
         BinMode := BinCode <> '';
 
+        POSEntrySalesLine.SetLoadFields("POS Entry No.", "Item Entry No.", "No.", "Variant Code", "Location Code", "Bin Code", Quantity);
         POSEntrySalesLine.SetRange("Item Entry No.", 0);
         POSEntrySalesLine.SetRange("No.", ItemNo);
         POSEntrySalesLine.SetRange("Variant Code", VariantCode);
         POSEntrySalesLine.SetRange("Location Code", LocationCode);
-        POSEntrySalesLine.SetLoadFields(
-            "POS Entry No.", "Item Entry No.", "No.", "Variant Code", "Location Code", "Bin Code", Quantity);
         if not POSEntrySalesLine.FindSet(false) then
             exit(0);
 
         repeat
             if BinMode then begin
-                TryResolveLineBin(
-                    POSEntrySalesLine."No.", POSEntrySalesLine."Variant Code",
-                    POSEntrySalesLine."Location Code", POSEntrySalesLine."Bin Code", LineBin);
+                TryResolveLineBin(POSEntrySalesLine."No.", POSEntrySalesLine."Variant Code", POSEntrySalesLine."Location Code", POSEntrySalesLine."Bin Code", LineBin);
+
                 if LineBin = BinCode then
                     AddPendingLineQty(POSEntrySalesLine, PendingQty);
             end else
@@ -188,8 +173,7 @@ codeunit 50100 "EDN Availability Calc"
         ReservationEntry.SetRange("Source Type", Database::"Sales Line");
         ReservationEntry.SetRange("Source Subtype", POSEntry."Sales Document Type");
         ReservationEntry.SetRange("Source ID", POSEntry."Sales Document No.");
-        ReservationEntry.SetRange(
-            "Reservation Status", ReservationEntry."Reservation Status"::Surplus);
+        ReservationEntry.SetRange("Reservation Status", ReservationEntry."Reservation Status"::Surplus);
         ReservationEntry.SetRange("Item No.", POSEntrySalesLine."No.");
         ReservationEntry.SetRange("Variant Code", POSEntrySalesLine."Variant Code");
         if not ReservationEntry.IsEmpty() then begin
@@ -198,14 +182,7 @@ codeunit 50100 "EDN Availability Calc"
         end;
     end;
 
-
-    procedure CalcOpenPOSQty(
-        ItemNo: Code[20];
-        VariantCode: Code[10];
-        LocationCode: Code[10];
-        BinCode: Code[20];
-        ExcludeRegisterNo: Code[10];
-        ExcludeSalesTicketNo: Code[20]): Decimal
+    procedure CalcOpenPOSQty(ItemNo: Code[20]; VariantCode: Code[10]; LocationCode: Code[10]; BinCode: Code[20]; ExcludeRegisterNo: Code[10]; ExcludeSalesTicketNo: Code[20]): Decimal
     var
         SaleLinePOS: Record "NPR POS Sale Line";
         OpenQty: Decimal;
@@ -215,30 +192,30 @@ codeunit 50100 "EDN Availability Calc"
     begin
         BinMode := BinCode <> '';
 
+        SaleLinePOS.SetLoadFields("Register No.", "Sales Ticket No.", "Bin Code", "Quantity (Base)");
         SaleLinePOS.SetRange("Line Type", SaleLinePOS."Line Type"::Item);
         SaleLinePOS.SetRange("No.", ItemNo);
         SaleLinePOS.SetRange("Variant Code", VariantCode);
         SaleLinePOS.SetRange("Location Code", LocationCode);
         SaleLinePOS.SetFilter("Quantity (Base)", '>%1', 0);
-        SaleLinePOS.SetLoadFields("Register No.", "Sales Ticket No.", "Bin Code", "Quantity (Base)");
         if not SaleLinePOS.FindSet(false) then
             exit(0);
 
         repeat
             CountLine := not ((SaleLinePOS."Register No." = ExcludeRegisterNo) and
                               (SaleLinePOS."Sales Ticket No." = ExcludeSalesTicketNo));
+
             if CountLine and BinMode then begin
-                TryResolveLineBin(
-                    ItemNo, VariantCode, LocationCode, SaleLinePOS."Bin Code", LineBin);
+                TryResolveLineBin(ItemNo, VariantCode, LocationCode, SaleLinePOS."Bin Code", LineBin);
                 CountLine := LineBin = BinCode;
             end;
+
             if CountLine then
                 OpenQty += SaleLinePOS."Quantity (Base)";
         until SaleLinePOS.Next() = 0;
 
         exit(OpenQty);
     end;
-
 
     procedure GetCurrentSaleQty(CurrentLine: Record "NPR POS Sale Line"; EffectiveBinCode: Code[20]): Decimal
     var
@@ -257,7 +234,6 @@ codeunit 50100 "EDN Availability Calc"
         exit(SaleLinePOS."Quantity (Base)");
     end;
 
-
     procedure IsPreventNegativeActive(ItemNo: Code[20]): Boolean
     var
         Item: Record Item;
@@ -268,6 +244,7 @@ codeunit 50100 "EDN Availability Calc"
         case Item."Prevent Negative Inventory" of
             Item."Prevent Negative Inventory"::Yes:
                 exit(true);
+
             Item."Prevent Negative Inventory"::No:
                 exit(false);
         end;
@@ -276,7 +253,6 @@ codeunit 50100 "EDN Availability Calc"
         exit(InventorySetupGlobal."Prevent Negative Inventory");
     end;
 
-
     local procedure TryResolveLineBin(ItemNo: Code[20]; VariantCode: Code[10]; LocationCode: Code[10]; LineBin: Code[20]; var ResolvedBin: Code[20]): Boolean
     var
         WMSManagement: Codeunit "WMS Management";
@@ -284,6 +260,7 @@ codeunit 50100 "EDN Availability Calc"
         ResolvedBin := LineBin;
         if ResolvedBin <> '' then
             exit(true);
+
         exit(WMSManagement.GetDefaultBin(ItemNo, VariantCode, LocationCode, ResolvedBin));
     end;
 
@@ -291,6 +268,7 @@ codeunit 50100 "EDN Availability Calc"
     begin
         if InventorySetupFetched then
             exit;
+
         InventorySetupGlobal.Get();
         InventorySetupFetched := true;
     end;
@@ -299,13 +277,17 @@ codeunit 50100 "EDN Availability Calc"
     begin
         if LocationCode = '' then
             exit(false);
+
         if LocationCacheLoaded and (LocationCacheCode = LocationCode) then
             exit(true);
+
         LocationCacheLoaded := LocationCache.Get(LocationCode);
+
         if LocationCacheLoaded then
             LocationCacheCode := LocationCode
         else
             LocationCacheCode := '';
+
         exit(LocationCacheLoaded);
     end;
 
@@ -313,9 +295,12 @@ codeunit 50100 "EDN Availability Calc"
     begin
         if (LocationCode = '') or (BinCode = '') then
             exit(false);
+
         if BinCacheLoaded and (BinCacheLocation = LocationCode) and (BinCacheCode = BinCode) then
             exit(true);
+
         BinCacheLoaded := BinCache.Get(LocationCode, BinCode);
+
         if BinCacheLoaded then begin
             BinCacheLocation := LocationCode;
             BinCacheCode := BinCode;
@@ -323,6 +308,7 @@ codeunit 50100 "EDN Availability Calc"
             BinCacheLocation := '';
             BinCacheCode := '';
         end;
+
         exit(BinCacheLoaded);
     end;
 }

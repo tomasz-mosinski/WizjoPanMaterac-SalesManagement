@@ -120,16 +120,6 @@ table 50100 "EDN Neg. Sale Override Log"
             DecimalPlaces = 0 : 5;
             Editable = false;
         }
-        field(33; "Reserved Qty (Base)"; Decimal)
-        {
-            Caption = 'Of Which Reserved';
-            DataClassification = CustomerContent;
-            DecimalPlaces = 0 : 5;
-            Editable = false;
-            ObsoleteReason = 'Order reservations are no longer part of the POS availability calculation.';
-            ObsoleteState = Pending;
-            ObsoleteTag = '1.0.5.0';
-        }
         field(34; "Pending POS Qty (Base)"; Decimal)
         {
             Caption = 'Of Which Unposted POS Entries';

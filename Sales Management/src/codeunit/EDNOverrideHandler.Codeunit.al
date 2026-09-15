@@ -21,7 +21,6 @@ codeunit 50104 "EDN Override Handler"
         AdjustmentDescLbl: Label 'Automatic adjustment - POS sale below stock';
         AdjustmentFailedLbl: Label 'The stock adjustment for %1 could not be posted: %2', Comment = '%1 = Item No., %2 = error text';
 
-
     procedure HandleOverride(
         SaleLinePOS: Record "NPR POS Sale Line";
         POSStore: Record "NPR POS Store";
@@ -47,6 +46,7 @@ codeunit 50104 "EDN Override Handler"
 
         if POSStore."EDN Override Action" <> POSStore."EDN Override Action"::"Auto Positive Adjustment" then
             exit;
+
         if not PreventActive then
             exit;
 
@@ -64,7 +64,6 @@ codeunit 50104 "EDN Override Handler"
         PreventActive: Boolean)
     begin
         OverrideLog.InitFromSaleLine(SaleLinePOS, POSStore.Code);
-
         OverrideLog."Available Qty (Base)" := AvailableBase;
         OverrideLog."Requested Qty (Base)" := RequestedBase;
         OverrideLog."Shortfall Qty (Base)" := ShortfallBase;
@@ -78,7 +77,6 @@ codeunit 50104 "EDN Override Handler"
         OverrideLog."Prevent Neg. Inv. Active" := PreventActive;
         OverrideLog.Insert(true);
     end;
-
 
     local procedure PostAdjustment(
         var OverrideLog: Record "EDN Neg. Sale Override Log";
@@ -113,23 +111,24 @@ codeunit 50104 "EDN Override Handler"
         BinCodeToUse := OverrideLog."Bin Code";
         if (BinCodeToUse = '') and Location.Get(OverrideLog."Location Code") then
             if Location."Bin Mandatory" and not Location."Directed Put-away and Pick" then
-                WMSManagement.GetDefaultBin(
-                    OverrideLog."Item No.", OverrideLog."Variant Code", OverrideLog."Location Code", BinCodeToUse);
+                WMSManagement.GetDefaultBin(OverrideLog."Item No.", OverrideLog."Variant Code", OverrideLog."Location Code", BinCodeToUse);
+
         if BinCodeToUse <> '' then
             ItemJnlLine.Validate("Bin Code", BinCodeToUse);
 
         ItemJnlLine.Validate("Unit of Measure Code", Item."Base Unit of Measure");
         ItemJnlLine.Validate(Quantity, QtyBase);
+
         if POSStore."EDN Adjustment Reason Code" <> '' then
             ItemJnlLine.Validate("Reason Code", POSStore."EDN Adjustment Reason Code");
+
         ItemJnlLine.Description := CopyStr(AdjustmentDescLbl, 1, MaxStrLen(ItemJnlLine.Description));
 
         if TryPostItemJnlLine(ItemJnlPostLine, ItemJnlLine) then begin
             OverrideLog."Adjustment Posted" := true;
             OverrideLog."Adjustment Document No." := DocumentNo;
         end else
-            OverrideLog."Adjustment Error" :=
-                CopyStr(GetLastErrorText(), 1, MaxStrLen(OverrideLog."Adjustment Error"));
+            OverrideLog."Adjustment Error" := CopyStr(GetLastErrorText(), 1, MaxStrLen(OverrideLog."Adjustment Error"));
 
         OverrideLog.Modify(true);
 

@@ -22,13 +22,13 @@ codeunit 50102 "EDN Install"
         EnableTableEventHook();
     end;
 
-
     local procedure EnableTableEventHook()
     var
         InventorySetup: Record "Inventory Setup";
     begin
         if not InventorySetup.Get() then
             exit;
+
         InventorySetup."EDN Use Fallback Hook" := true;
         InventorySetup.Modify(false);
     end;

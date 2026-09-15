@@ -2,7 +2,7 @@ namespace EDN.SalesManagement;
 
 using Microsoft.Inventory.Setup;
 
-tableextension 50101 "EDN Inventory Setup Ext" extends "Inventory Setup"
+tableextension 50101 "EDN Inventory Setup" extends "Inventory Setup"
 {
     fields
     {

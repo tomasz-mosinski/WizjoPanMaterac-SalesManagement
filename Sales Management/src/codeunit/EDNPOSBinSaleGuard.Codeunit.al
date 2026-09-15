@@ -11,12 +11,6 @@ codeunit 50106 "EDN POS Bin Sale Guard"
         BypassActive: Boolean;
         PaymentBlockedByBinErr: Label 'Payment cannot be taken for this sale. Item %1 is on bin %2, which is not enabled for POS sales (Allowed for POS Sale = No). Move the item to a sales floor bin marked "Allowed for POS Sale", or remove the line.', Comment = '%1 = Item No., %2 = bin code';
 
-
-    /// <summary>
-    /// Turns the bin-check bypass on or off for the current POS session. The "convert POS line to sales
-    /// order" flow sets it while it puts the reservation bin on a line and collects the deposit, then
-    /// clears it (also in its error path). Any switch back to the Sale view clears it defensively.
-    /// </summary>
     procedure SetBypassBinCheckForPayment(NewValue: Boolean)
     begin
         BypassActive := NewValue;
@@ -26,7 +20,6 @@ codeunit 50106 "EDN POS Bin Sale Guard"
     begin
         exit(BypassActive);
     end;
-
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"NPR POS Front End Management", 'OnBeforeChangeToPaymentView', '', false, false)]
     local procedure BlockPaymentViewWhenLineOnForbiddenBin(POSSession: Codeunit "NPR POS Session")
@@ -54,8 +47,10 @@ codeunit 50106 "EDN POS Bin Sale Guard"
     begin
         if Rec.IsTemporary() then
             exit;
+
         if Rec."Line Type" <> Rec."Line Type"::"POS Payment" then
             exit;
+
         if BypassActive then
             exit;
 

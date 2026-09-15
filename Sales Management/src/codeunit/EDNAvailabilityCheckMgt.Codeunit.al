@@ -25,7 +25,6 @@ codeunit 50101 "EDN Availability Check Mgt."
         NoBinErr: Label 'No bin is set on the line for %1. The location requires a bin. Ask an administrator to set a default bin for the item.', Comment = '%1 = Item No.';
         CancelledErr: Label 'The user cancelled the sale.';
 
-
     procedure CheckWholeSale(RegisterNo: Code[10]; SalesTicketNo: Code[20])
     var
         SaleLinePOS: Record "NPR POS Sale Line";
@@ -39,7 +38,6 @@ codeunit 50101 "EDN Availability Check Mgt."
                 CheckLine(SaleLinePOS);
             until SaleLinePOS.Next() = 0;
     end;
-
 
     procedure CheckLine(var SaleLinePOS: Record "NPR POS Sale Line")
     var
@@ -55,36 +53,31 @@ codeunit 50101 "EDN Availability Check Mgt."
 
         if not POSUnit.Get(SaleLinePOS."Register No.") then
             exit;
+
         if not POSStore.Get(POSUnit."POS Store Code") then
             exit;
+
         if POSStore."EDN Block Mode" = POSStore."EDN Block Mode"::Disabled then
             exit;
+
         if SaleLinePOS."Location Code" = '' then
             exit;
-
 
         if AvailabilityCalc.LocationRequiresBin(SaleLinePOS."Location Code") then
             if SaleLinePOS."Bin Code" = '' then
                 Error(NoBinErr, SaleLinePOS."No.");
 
-        EffBinCode := AvailabilityCalc.GetEffectiveBinCode(
-            SaleLinePOS."No.", SaleLinePOS."Variant Code", SaleLinePOS."Location Code", SaleLinePOS."Bin Code");
+        EffBinCode := AvailabilityCalc.GetEffectiveBinCode(SaleLinePOS."No.", SaleLinePOS."Variant Code", SaleLinePOS."Location Code", SaleLinePOS."Bin Code");
 
-        AvailableBase := AvailabilityCalc.GetAvailableQty(
-            SaleLinePOS."No.", SaleLinePOS."Variant Code", SaleLinePOS."Location Code",
-            EffBinCode, POSStore, SaleLinePOS."Register No.", SaleLinePOS."Sales Ticket No.");
+        AvailableBase := AvailabilityCalc.GetAvailableQty(SaleLinePOS."No.", SaleLinePOS."Variant Code", SaleLinePOS."Location Code", EffBinCode, POSStore, SaleLinePOS."Register No.", SaleLinePOS."Sales Ticket No.");
 
-        RequestedBase :=
-            SaleLinePOS."Quantity (Base)" + AvailabilityCalc.GetCurrentSaleQty(SaleLinePOS, EffBinCode);
+        RequestedBase := SaleLinePOS."Quantity (Base)" + AvailabilityCalc.GetCurrentSaleQty(SaleLinePOS, EffBinCode);
 
         if RequestedBase <= AvailableBase then
             exit;
 
-
         if HasOverridePermission(POSStore) then begin
-            OverrideHandler.HandleOverride(
-                SaleLinePOS, POSStore, AvailableBase, RequestedBase,
-                Enum::"EDN Override Reason"::"Permission Override");
+            OverrideHandler.HandleOverride(SaleLinePOS, POSStore, AvailableBase, RequestedBase, Enum::"EDN Override Reason"::"Permission Override");
             exit;
         end;
 
@@ -105,6 +98,7 @@ codeunit 50101 "EDN Availability Check Mgt."
                         SaleLinePOS, EffBinCode, AvailableBase, RequestedBase)
                     then
                         Error(CancelledErr);
+
                     OverrideHandler.HandleOverride(
                         SaleLinePOS, POSStore, AvailableBase, RequestedBase,
                         Enum::"EDN Override Reason"::"Cashier Confirmed");
@@ -123,16 +117,18 @@ codeunit 50101 "EDN Availability Check Mgt."
 
         if SaleLinePOS."No." in ['', '*'] then
             exit(false);
+
         if not Item.Get(SaleLinePOS."No.") then
             exit(false);
+
         if not Item.IsInventoriableType() then
             exit(false);
+
         if Item."EDN Allow POS Negative" then
             exit(false);
 
         exit(true);
     end;
-
 
     local procedure ConfirmSaleBelowStock(SaleLinePOS: Record "NPR POS Sale Line"; EffBinCode: Code[20]; AvailableBase: Decimal; RequestedBase: Decimal): Boolean
     var
@@ -145,11 +141,13 @@ codeunit 50101 "EDN Availability Check Mgt."
         if EffBinCode <> '' then begin
             if PreventActive then
                 exit(Confirm(WarnPreventBinQst, false, ItemNo, AvailableBase, RequestedBase, EffBinCode));
+
             exit(Confirm(WarnBinQst, false, ItemNo, AvailableBase, RequestedBase, EffBinCode));
         end;
 
         if PreventActive then
             exit(Confirm(WarnPreventQst, false, ItemNo, AvailableBase, RequestedBase));
+
         exit(Confirm(WarnQst, false, ItemNo, AvailableBase, RequestedBase));
     end;
 

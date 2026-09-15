@@ -17,34 +17,35 @@ codeunit 50105 "EDN POS Sale Line Fallback"
         MarkerUoM: Code[10];
         MarkerQtyBase: Decimal;
 
-
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"NPR POS Sale Line", 'OnAfterSetQuantityBeforeCommit', '', false, false)]
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"NPR POS Sale Line", OnAfterSetQuantityBeforeCommit, '', false, false)]
     local procedure NprOnAfterSetQuantityBeforeCommit(var SaleLinePOS: Record "NPR POS Sale Line"; xSaleLinePOS: Record "NPR POS Sale Line")
     begin
         HandlePublicSetEvent(SaleLinePOS);
     end;
 
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"NPR POS Sale Line", 'OnAfterSetUoMBeforeCommit', '', false, false)]
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"NPR POS Sale Line", OnAfterSetUoMBeforeCommit, '', false, false)]
     local procedure NprOnAfterSetUoMBeforeCommit(var SaleLinePOS: Record "NPR POS Sale Line"; xSaleLinePOS: Record "NPR POS Sale Line")
     begin
         HandlePublicSetEvent(SaleLinePOS);
     end;
 
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"NPR POS Sale Line", 'OnAfterSetLocationBeforeCommit', '', false, false)]
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"NPR POS Sale Line", OnAfterSetLocationBeforeCommit, '', false, false)]
     local procedure NprOnAfterSetLocationBeforeCommit(var SaleLinePOS: Record "NPR POS Sale Line"; xSaleLinePOS: Record "NPR POS Sale Line")
     begin
         HandlePublicSetEvent(SaleLinePOS);
     end;
 
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"NPR POS Sale Line", 'OnAfterInsertPOSSaleLineBeforeCommit', '', false, false)]
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"NPR POS Sale Line", OnAfterInsertPOSSaleLineBeforeCommit, '', false, false)]
     local procedure NprOnAfterInsertPOSSaleLineBeforeCommit(var SaleLinePOS: Record "NPR POS Sale Line")
     var
         CheckMgt: Codeunit "EDN Availability Check Mgt.";
     begin
         if SaleLinePOS.IsTemporary() then
             exit;
+
         if not IsNprEventModeEnabled() then
             exit;
+
         ClearMarker();
         CheckMgt.CheckLine(SaleLinePOS);
     end;
@@ -55,24 +56,28 @@ codeunit 50105 "EDN POS Sale Line Fallback"
     begin
         if SaleLinePOS.IsTemporary() then
             exit;
+
         if not IsNprEventModeEnabled() then
             exit;
+
         if TryConsumeMarker(SaleLinePOS) then
             exit;
+
         CheckMgt.CheckLine(SaleLinePOS);
     end;
 
-
-    [EventSubscriber(ObjectType::Table, Database::"NPR POS Sale Line", 'OnAfterValidateEvent', 'Quantity', false, false)]
+    [EventSubscriber(ObjectType::Table, Database::"NPR POS Sale Line", OnAfterValidateEvent, Quantity, false, false)]
     local procedure OnAfterValidateQuantity(var Rec: Record "NPR POS Sale Line"; var xRec: Record "NPR POS Sale Line")
     var
         CheckMgt: Codeunit "EDN Availability Check Mgt.";
     begin
         if Rec.IsTemporary() then
             exit;
+
         ClearMarker();
         if not IsFallbackEnabled() then
             exit;
+
         if IsNullGuid(Rec.SystemId) and IsNprEventModeEnabled() then
             exit;
 
@@ -85,7 +90,7 @@ codeunit 50105 "EDN POS Sale Line Fallback"
             ArmMarker(Rec);
     end;
 
-    [EventSubscriber(ObjectType::Table, Database::"NPR POS Sale Line", 'OnAfterValidateEvent', 'Variant Code', false, false)]
+    [EventSubscriber(ObjectType::Table, Database::"NPR POS Sale Line", OnAfterValidateEvent, "Variant Code", false, false)]
     local procedure OnAfterValidateVariantCode(var Rec: Record "NPR POS Sale Line"; var xRec: Record "NPR POS Sale Line")
     var
         CheckMgt: Codeunit "EDN Availability Check Mgt.";
@@ -94,13 +99,15 @@ codeunit 50105 "EDN POS Sale Line Fallback"
             exit;
 
         ClearMarker();
-
         if not IsFallbackEnabled() then
             exit;
+
         if IsNullGuid(Rec.SystemId) and IsNprEventModeEnabled() then
             exit;
+
         if Rec."Variant Code" = xRec."Variant Code" then
             exit;
+
         if Rec.Quantity = 0 then
             exit;
 
@@ -110,7 +117,7 @@ codeunit 50105 "EDN POS Sale Line Fallback"
             ArmMarker(Rec);
     end;
 
-    [EventSubscriber(ObjectType::Table, Database::"NPR POS Sale Line", 'OnAfterValidateEvent', 'Location Code', false, false)]
+    [EventSubscriber(ObjectType::Table, Database::"NPR POS Sale Line", OnAfterValidateEvent, "Location Code", false, false)]
     local procedure OnAfterValidateLocationCode(var Rec: Record "NPR POS Sale Line"; var xRec: Record "NPR POS Sale Line")
     var
         CheckMgt: Codeunit "EDN Availability Check Mgt.";
@@ -122,10 +129,13 @@ codeunit 50105 "EDN POS Sale Line Fallback"
 
         if not IsFallbackEnabled() then
             exit;
+
         if IsNullGuid(Rec.SystemId) and IsNprEventModeEnabled() then
             exit;
+
         if Rec."Location Code" = xRec."Location Code" then
             exit;
+
         if Rec.Quantity = 0 then
             exit;
 
@@ -134,7 +144,6 @@ codeunit 50105 "EDN POS Sale Line Fallback"
         if not IsNullGuid(Rec.SystemId) then
             ArmMarker(Rec);
     end;
-
 
     local procedure ClearMarker()
     begin
@@ -179,13 +188,13 @@ codeunit 50105 "EDN POS Sale Line Fallback"
         exit(Hit);
     end;
 
-
     local procedure IsNprEventModeEnabled(): Boolean
     var
         InventorySetup: Record "Inventory Setup";
     begin
         if not InventorySetup.Get() then
             exit(false);
+
         exit(InventorySetup."EDN Use NPR POS Events");
     end;
 
@@ -195,6 +204,7 @@ codeunit 50105 "EDN POS Sale Line Fallback"
     begin
         if not InventorySetup.Get() then
             exit(false);
+
         exit(InventorySetup."EDN Use Fallback Hook");
     end;
 }
